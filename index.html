@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title>Document</title>
+    <style>
+        /*
+            Unidades relativas
+            1. Porcentaje %, cuando le damos un %
+            2. em (tamaño de fuente del contexto) (div o etiquetas semanticas) y rem (tamaño de fuente del root <html>)       
+            1em = 100% del tamaño de fuente en el contexto (padding interno o márgenes internos)
+            1rem = 100% del tamaño de fuente en el root (layout´s, márgenes, alturas)
+            3. Unidades de viewport: vw, vh, vmin, vmax
+            1vw = 1% del ancho del viewport
+            1vh = 1% del alto del viewport
+            1vmin = 15 del lado menor del viewport
+            1vmax = 1% del lado mayor del viewportº
+            */
+
+            body{
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            p{
+                /*1em = 40 píxeles*/
+                font-size: 2em;
+                padding: .5em;
+                background-color: yellow;
+                margin: 0 auto;
+                width: 75%;
+                min-width: 320px;
+                max-width: 800px;
+            }
+            
+            span{
+                /*Son 80px porque se multiplica del tañamo del parrafo que son 40px*/
+                font-size: 2em;
+            }
+            button{
+                font-size: 1em;
+                border-radius: .25em;
+            }
+    </style>
+    <title>RWD en la práctica</title>
 </head>
+
 <body>
-    
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis rerum molestiae, ducimus quisquam natus quo temporibus! Est eius a temporibus! Explicabo, cumque quam. Dolore reiciendis saepe animi dolorum ex? Quaerat.
+        <strong>Hola <span>Tunivers</span></strong>
+    </p>
+
+    <button>Botón</button>
+    <p>Hola mundo</p>
+    <footer>Footer</footer>
 </body>
 </html>
